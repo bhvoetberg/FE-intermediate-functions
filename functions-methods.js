@@ -11,6 +11,7 @@
 
 console.log("1");
 
+
 function getEmailDomain(emailAddress) {
     const at = emailAddress.indexOf("@") + 1;
     console.log(emailAddress.substring(at, emailAddress.length));
@@ -39,6 +40,7 @@ markEndOfTask();
 // };
 console.log("2");
 
+
 function typeOfEmail(emailAddress) {
     let typeEmail = "";
     if (emailAddress.includes("@novi-education")) {
@@ -51,7 +53,10 @@ function typeOfEmail(emailAddress) {
     return typeEmail;
 }
 
-console.log(typeOfEmail("n.eeken@novi.nl"));
+console.log(typeOfEmail("n.eeken@novi-education.nl"));            //geeft "Student"
+console.log(typeOfEmail("t.mellink@novi.nl"));          // geeft "Medewerker"
+console.log(typeOfEmail("novi.nlaapjesk@outlook.com")); // geeft "Extern" <-- deze moet het ook doen!
+console.log(typeOfEmail("a.wiersma@outlook.com"));      // geeft "Extern"
 
 
 markEndOfTask();
@@ -80,10 +85,10 @@ function checkEmailValidity(emailAddress) {
     return (atIncluded && noComma && noFullStopAtEnd);
 }
 
-console.log(checkEmailValidity("n.eeken@novi.nl")); //geeft true - want @ en punt op de juiste plek
+console.log(checkEmailValidity("n.eeken@novi.nl"));     //geeft true - want @ en punt op de juiste plek
 console.log(checkEmailValidity("tessmellink@novi.nl")); //geeft true - want @ en punt op de juiste plek
-console.log(checkEmailValidity("n.eekenanovi.nl")); //geeft false - want geen @
-console.log(checkEmailValidity("n.eeken@novinl.")); // geeft false - want de punt mag niet als laatst
+console.log(checkEmailValidity("n.eekenanovi.nl"));     //geeft false - want geen @
+console.log(checkEmailValidity("n.eeken@novinl."));     // geeft false - want de punt mag niet als laatst
 console.log(checkEmailValidity("tessmellink@novi,nl")); // geeft false - want er staat een komma in
 
 markEndOfTask();

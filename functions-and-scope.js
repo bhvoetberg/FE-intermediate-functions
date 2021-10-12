@@ -21,8 +21,9 @@ console.log("1a");
 let cumLaudes1a = 0;
 for (let i = 0; i < grades.length; i++) {
     if (grades[i] >= 8)
-        cumLaudes1a ++
+        cumLaudes1a ++;
 }
+console.log(cumLaudes1a);
 
 
 markEndOfTask()
@@ -44,7 +45,7 @@ function cumLaude(gradeList) {
     let cumLaudes1b = 0;
     for (let i = 0; i < gradeList.length; i++) {
         if (gradeList[i] >= 8)
-            cumLaudes1b++
+            cumLaudes1b++;
     }
     return cumLaudes1b;
 }
@@ -70,11 +71,13 @@ markEndOfTask()
 // ---- Verwachte uitkomst: 6.642857142857143
 console.log("2a");
 
-let sum = 0
-for (i=0; i < grades.length; i++) {
+
+let sum = 0;
+for (let i = 0; i < grades.length; i++) {
     sum = sum + grades[i];
 }
 console.log(sum/grades.length);
+
 
 markEndOfTask()
 
@@ -83,12 +86,14 @@ markEndOfTask()
 // Zorg ervoor dat jouw functie ook werkt als we een andere array willen checken, zoals bijvoorbeeld: [6, 4, 5] of [8, 9, 4, 6, 10].
 // Log het antwoord in de terminal.
 console.log("2b");
+
+
 function averageGrade (gradeList) {
-    let sum = 0
-    for (i=0; i < gradeList.length; i++) {
+    let sum = 0;
+    for (let i = 0; i < gradeList.length; i++) {
         sum = sum + gradeList[i];
     }
-    return sum/(i);
+    return sum/(gradeList.length);
 }
 
 console.log(averageGrade(grades));
@@ -109,12 +114,13 @@ markEndOfTask()
 // Tip: Google is your best friend!
 console.log("2c");
 
+
 console.log(averageGrade(grades).toFixed(2));
 console.log(averageGrade([6, 4, 5]).toFixed(2));
 console.log(averageGrade([8, 9, 4, 6, 10]).toFixed(2));
 
-markEndOfTask()
 
+markEndOfTask()
 
 
 /* Bonusopdracht: hoogste cijfer */
@@ -129,6 +135,7 @@ markEndOfTask()
 // ---- Verwachte uitkomst: 9
 console.log("3a");
 
+
 let maxGrade = 0;
 for (let i = 0; i < grades.length; i++ ) {
     if (grades[i]>maxGrade) {
@@ -136,6 +143,7 @@ for (let i = 0; i < grades.length; i++ ) {
     }
 }
 console.log(maxGrade);
+
 
 markEndOfTask()
 
@@ -150,6 +158,8 @@ markEndOfTask()
 // highestGrade([8, 9, 4, 6, 10]) geeft 10
 
 console.log("3b");
+
+
 function highestGrade (gradeList) {
     let maxGrade = 0;
     for (let i = 0; i < gradeList.length; i++ ) {
